@@ -43,6 +43,6 @@ Set the parameters for the .personal, and the providers.  Of course the return p
 
 That's the end of coding the smart contract except for of course the actual smart contract itself.  The above code was just for 
 connecting the smart contract with the ethereum blockchain and the json interface via the node.js and the web3 library.
-
+If you would like contribute to this project please commit your code to the branches marked dev.  Thank you
 
 //
