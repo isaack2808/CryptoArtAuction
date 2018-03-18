@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  web:
+    ports:
+      - 0.0.0.0:3000:3000
+    environment:
+      REACT_APP_API_URL: http://localhost:5000
+      REACT_APP_TERRAFORM_CONTRACT_ADDRESS: 0x4bc79175f1f6fded07f04aa1b4b0465ecff6f1b3
+      REACT_APP_RESERVE_CONTRACT_ADDRESS: 0x4bc79175f1f6fded07f04aa1b4b0465ecff6f1b3
+      REACT_APP_MANA_CONTRACT_ADDRESS: 0x2a8fd99c19271f4f04b1b7b9c4f7cf264b626edb
+      NODE_ENV: 'development'
+      PORT: 3000
+
+  postgres:
+    volumes:
+      - ./docker/10-init-development.sql:/docker-entrypoint-initdb.d/10-init.sql
+
+  api:
+    environment:
+      CONNECTION_STRING: postgres://magiklander@postgres:5432/auction
+      PORT: 5000
+    ports:
+      - 0.0.0.0:5000:5000

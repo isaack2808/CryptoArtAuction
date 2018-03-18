@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    volumes:
+      - .:/usr/src/app/
+      - /usr/src/app/node_modules
+    environment:
+      CONNECTION_STRING: postgres://magiklander@postgres:5432/auction_test
+      LETSENCRYPT_HOST: api.auction.aquietstgallery.today
+      PORT: 80
+    networks:
+      - db
+      - web
+
+  web:
+    build: ./webapp
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    environment:
+      REACT_APP_API_URL: https://api.auction.aquietstgallery.today
+      LETSENCRYPT_HOST: auction.aquietstgallery.today
+      PORT: 80
+    networks:
+      - web
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres_data:/var/lib/postgres/data
+    environment:
+      POSTGRES_USER: magiklander
+      POSTGRES_DB: auction
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge
+  db:
+    internal: true
