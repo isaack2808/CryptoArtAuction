@@ -1,0 +1,67 @@
+{
+  "name": "auction",
+  "version": "1.0.2",
+  "description": "Participate in the Art Auction",
+  "main": "src/server.js",
+  "scripts": {
+    "docs": "npx jsdoc -c conf.json -r src/**/*.js",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint --fix .",
+    "test": "npx mocha -r babel-register -r specs/spec_utils.js specs/setup.js specs/*.spec.js",
+    "watch:test": "npx mocha -r babel-register -r specs/spec_utils.js specs/setup.js specs/*.spec.js --watch",
+    "build": "npm run lint && npm run test",
+    "start": "babel-node src/server.js",
+    "dev": "nodemon --exec npm run start",
+    "docker:init": "docker exec auction_api_1 /bin/bash -c \"cd scripts; babel-node init.js\"",
+    "docker:dev:build": "docker-compose -f docker-compose.yml -f docker-compose.development.yml build",
+    "docker:dev:run": "docker-compose -f docker-compose.yml -f docker-compose.development.yml up",
+    "docker:prod:build": "docker-compose -f docker-compose.yml -f docker-compose.production.yml build",
+    "docker:prod:start": "docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isaack2808/solidityauctiontest.git"
+  },
+  "keywords": [
+    "aquietstgallery",
+    "auction",
+    "dapp"
+  ],
+  "author": "AQuietStGallery",
+  "license": "MIT",
+  "dependencies": {
+    "bignumber.js": "^5.0.0",
+    "body-parser": "^1.18.2",
+    "cli-table": "^0.3.1",
+    "aquietstgallery": "git+https://github.com/isaack2808/solidityauctiontest.git#release",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "git-rev-sync": "^1.9.1",
+    "google-spreadsheet": "^2.0.4",
+    "pngjs-image": "^0.11.7",
+    "postgres-bytea": "^1.0.0",
+    "request-promise-native": "^1.0.5",
+    "rollbar": "^2.3.4",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^4.12.1",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.5.1",
+    "jsdoc": "^3.5.5",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "prettier": "^1.7.4",
+    "sinon": "^4.0.1"
+  }
+}
