@@ -214,7 +214,8 @@ contract SimpleAuction {
     myContract.options;
     > {
         address: '0x5a2714cb8c2130dc587cb8b6d5f37d3cecc56eee',
-        jsonInterface: [uint256],
+
+jsonInterface: [uint256],
         from: '0xe3ab9300cbd6df06c160065a24b3592c64a0af8bc',
         gasPrice: '1000000000000000000',
         gas:       }
@@ -264,8 +265,10 @@ contract SimpleAuction {
 
     // Gas estimation
     myContract.deploy({
-        data: '0x5a271...',
-        arguments: [5a2, 'My String']
+        zeropad(5, 10);
+        data: '0x000000000005a271...',
+	i = int()
+        arguments: [369265, 'str(i)']
     })
     estimateGas(function(err, gas){
         console.log(gas);
