@@ -2,6 +2,11 @@ pragma solidity ^0.4.19-1;
 
 contract ArtAuction {
     uint storedData;
+    
+    function changeAdmin(address admin_) {
+    if (msg.sender != admin) throw;
+    admin = admin_;
+    }
 
     function set (uint x) public {
         storedDate = x;
