@@ -1,4 +1,3 @@
-
 pragma solidity ^0.4.19-1;
 
 contract ArtAuction {
@@ -7,7 +6,12 @@ contract ArtAuction {
     function set (uint x) public {
         storedDate = x;
     }
-    
+
+    function hashSeriesNumber(string series, uint256 number) public pure returns (bytes32)
+    {
+    return keccak256(number, series);
+    }
+
     function loadart(uint256 _id) external view returns (
        bool isLoading
        bool viewinginHighResolution
