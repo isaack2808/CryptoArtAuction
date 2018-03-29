@@ -1,3 +1,4 @@
+
 pragma solidity ^0.4.19-1;
 
 contract ArtAuction {
@@ -7,9 +8,35 @@ contract ArtAuction {
         storedDate = x;
     }
     
-    function loadart(uint256 _id) external view returns
+    function loadart(uint256 _id) external view returns (
        bool isLoading
        bool viewinginHighResolution
+       uint256 cooldownIndex,
+       uint256 imgurAddressofart
+       uint256 nextactionAt,
+       uint256 createUserid,
+       uint256 enterBid,
+       uint256 placebidwithId,
+       uint256 winningBid,
+       uint256 losingBid,
+       uint256 wonbidEmailid,
+       uint256 endArtAuction,
+    ){
+       Art Storage Kit = art[_id];
+       //if the variable is 0 than no bids will be placed
+       isLoading = (art.imgur = imgurAddressofart);
+       viewinginHighResolution = (art.imgur = nextactionAt);
+       cooldownIndex = uint256(art.cooldownIndex);
+       imgurAddressofart = uint256(art.imgurAddressofart);
+       nextactionAt = uint256(art.nextactionAt);
+       createUserid = uint256(art.createUserid);
+       enterBid = uint256(art.enterBid);
+       placebidwithId = uint256(art.placebidwithId);
+       winningBid = uint256(art.winningBid);
+       losingBid = uint256(art.losingBid);
+       wonbidEmailid = uint256(art.wonbidEmailid);
+       endArtAuction = uint256(art.endArtAuction);
+       }
 
     function get() public constant returns (uint) {
         return storedData;
