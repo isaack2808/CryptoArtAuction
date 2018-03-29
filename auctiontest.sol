@@ -1,11 +1,15 @@
 pragma solidity ^0.4.19-1;
 
-contract SimpleAuction {
+contract ArtAuction {
     uint storedData;
 
     function set (uint x) public {
         storedDate = x;
     }
+    
+    function loadart(uint256 _id) external view returns
+       bool isLoading
+       bool viewinginHighResolution
 
     function get() public constant returns (uint) {
         return storedData;
@@ -39,7 +43,7 @@ contract SimpleAuction {
     /// Create a simple auction with '_biddingTime'                                       
     /// seconds bidding time on behalf of the                                             
     /// beneficiary address '_beneficiary'.                                               
-    function SimpleAuction(                                                               
+    function ArtAuction(                                                               
         uint _biddingTime,                                                                
 	address _beneficiary                                                              
     ) public {                                                                            
