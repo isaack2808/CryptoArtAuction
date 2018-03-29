@@ -1,0 +1,37 @@
+.FAQPage {
+  color: #3E396B;
+}
+
+.FAQPage .content {
+  max-width: 800px;
+}
+
+.FAQPage .content h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.FAQPage .content h3 {
+  margin-top: 32px;
+}
+
+.FAQPage .questions {
+  padding-bottom: 50px;
+}
+
+.FAQPage .question p {
+  color: #36316D;
+  font-size: 16px;
+}
+
+.FAQPage .dash:after {
+  content: " ";
+  background-color: #7570A0;
+  width: 12px;
+  height: 2px;
+  display: inline-block;
+  border-radius: 2px;
+  top: -2px;
+  position: relative;
+}

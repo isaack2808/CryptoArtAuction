@@ -1,0 +1,91 @@
+.Stats {
+  max-width: 1170px;
+  margin: auto;
+  color: #3e396b;
+  font-size: 16px;
+}
+
+.Stats .content h1 {
+  font-size: 36px;
+  margin-bottom: 45px;
+  font-family: 'Source Sans Pro Light', Helvetica, sans-serif;
+  text-align: center;
+}
+
+.Stats h4 {
+  margin-top: 5px;
+  margin-bottom: 18px;
+  font-size: 24px;
+  color: #23527C;
+}
+
+.Stats .Box {
+  padding: 0;
+  margin: auto;
+  margin-bottom: 65px;
+}
+
+.Stats .Box.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Stats .Box .box-left {
+  border-bottom: 1px solid #ECECEC;
+  border-right: 1px solid #ECECEC;
+}
+
+.Stats .Box .box-right {
+  border-bottom: 1px solid #ECECEC;
+}
+
+.Stats .Definition dd {
+  font-size: 24px;
+  color: #23527C;
+}
+
+.Stats .Definition dt {
+  margin-bottom: 12px;
+}
+
+.Stats .Definition dt a {
+  font-weight: normal;
+}
+
+.Stats .title {
+  margin-bottom: 5px;
+  margin-left: 15px;
+  color: #3E3A6B;
+}
+
+.Stats .definition-list {
+  margin-top: 1em;
+}
+
+.Stats .definition-list dt {
+  margin-bottom: 0;
+}
+
+.Stats .definition-list .position {
+  font-size: 18px;
+}
+
+.Stats .definition-list .mana {
+  font-size: 24px;
+  color: #23527C;
+}
+
+.Stats .definition-list dd {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .Stats .Box .box-section {
+    border-right: 1px solid #ECECEC;
+  }
+
+  .Stats .Box .Definition {
+    padding-left: 15px;
+  }
+}

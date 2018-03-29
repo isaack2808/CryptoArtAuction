@@ -1,0 +1,64 @@
+.Icon {
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.Icon-A-Quiet-Street-Gallery {
+  width: 152px;
+  height: 152px;
+  background-image: url("../images/logo.svg");
+}
+
+.Icon-AQuietStreetGallery-loading {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/AQuietStreetGallery-loading.gif");
+}
+
+.Icon-ArtAuction {
+  width: 16px;
+  height: 11px;
+  background-image: url("../images/ArtAuction.svg");
+}
+
+.Icon-signup {
+  width: 12px;
+  height: 10px;
+  background-image: url("../images/signup.svg");
+}
+
+.Icon-endingsoon {
+  width: 11px;
+  height: 13px;
+  background-image: url("../images/endingsoon.svg");
+}
+
+.Icon-address {
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/address.svg");
+}
+
+.Icon-link-graph {
+  width: 126px;
+  height: 24px;
+  background-image: url("../images/link-graph.svg");
+}
+
+.Icon-linked-graph {
+  width: 126px;
+  height: 24px;
+  background-image: url("../images/linked-graph.svg");
+}
+
+.Icon-rocketchat, .Icon-facebook {
+  width: 16px;
+  height: 15px;
+  background-image: url("../images/social-icons.svg");
+}
+
+.Icon-rocketchat { background-position: -40px 0; }
+.Icon-facebook   { background-position: -152px 0; }
+

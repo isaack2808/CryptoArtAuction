@@ -1,0 +1,109 @@
+.AddressStats {
+  color: #3e396b;
+  font-size: 16px;
+  max-width: 1170px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.AddressStats .content h1 {
+  font-size: 36px;
+  margin-bottom: 45px;
+  font-family: 'Source Sans Pro Light', Helvetica, sans-serif;
+  text-align: center;
+}
+
+.AddressStats h4 {
+  margin-top: 5px;
+  margin-bottom: 18px;
+  font-size: 24px;
+  color: #23527C;
+}
+
+.AddressStats .Box {
+  padding: 0;
+  margin: auto;
+  margin-bottom: 65px;
+}
+
+.AddressStats .Box.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.AddressStats .Box .box-left {
+  border-bottom: 1px solid #ECECEC;
+  border-right: 1px solid #ECECEC;
+}
+
+.AddressStats .Box .box-right {
+  border-bottom: 1px solid #ECECEC;
+}
+
+.AddressStats .Definition dd {
+  font-size: 24px;
+  color: #23527C;
+}
+
+.AddressStats .Definition dt {
+  margin-bottom: 12px;
+}
+
+.AddressStats .Definition dt a {
+  display: block;
+  font-weight: normal;
+}
+
+.AddressStats .title {
+  margin-bottom: 5px;
+  margin-left: 15px;
+  color: #3E3A6B;
+}
+
+.AddressStats .definition-long-list {
+  margin-top: 1em;
+}
+
+.AddressStats .definition-long-list dt {
+  margin-bottom: 0;
+}
+
+.AddressStats .definition-long-list dd {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.AddressStats .definition-long-list .mana {
+  font-size: 24px;
+  color: #23527C;
+}
+
+.AddressStats .definition-long-list small {
+  font-size: 15px;
+  color: #999;
+}
+
+/*
+
+@media (max-width: 768px) {
+  .AddressStats .winning-bids {
+    margin-bottom: 20px;
+  }
+}
+
+.AddressStats .parcel-link {
+  text-align: right;
+}
+.AddressStats .mana-amount {
+  text-align: center;
+}
+.AddressStats .header {
+  font-weight: bold;
+}
+.AddressStats .parcel-item.header {
+  margin-bottom: 5px;
+}
+.AddressStats .updated-at {
+  text-align: left;
+}
+*/
