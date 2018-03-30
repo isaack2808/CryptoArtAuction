@@ -6,7 +6,7 @@ This is a repository for creating an art auction website, apps, and dapps where 
 
 Some of the prerequisite packages are the following:
 
-solidity, solc, node-js, npm, web3, ganache-cli, truffle, Docker, Docker Compose, nodejs, java, sqlite
+solidity, solc, node-js, npm, web3, ganache-cli, truffle, Docker, Docker Compose, python, Golang, java, sqlite
 
 I am currently working on creating the imgur hashes that will reference the artwork.  
 
