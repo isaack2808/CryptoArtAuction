@@ -1,0 +1,13 @@
+init:
+    contract.EventEmitter[0] 
+code:
+
+    def register(string_text)(
+        text[msg.sender] = _text;
+    )
+    event Emit(address addr, string message);
+    
+    def doEmit(string message) returns (bool):
+        Emit(msg.sender, message);
+        return true;
+    

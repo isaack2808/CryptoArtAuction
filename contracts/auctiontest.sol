@@ -294,27 +294,6 @@ jsonInterface: [uint256],
         console.log(newContractInstance.options.address) // instance with the new contract address
     });
 
-
-    //Simply encoding
-    myContract.deploy({
-        data: '0x5a271'
-        arguments: [5a2, 'My String']
-    })
-    .encodeABI ();
-    > '0x5a271...8b6d5f37d3cecc56eee'
-
-    // Gas estimation
-    myContract.deploy({
-        zeropad(5, 10);
-        data: '0x000000000005a271...',
-	i = int()
-        arguments: [369265, 'str(i)']
-    })
-    estimateGas(function(err, gas){
-        console.log(gas);
-    });
-
-
     // sending and using the events
 
     myContract.methods.myMethod(123).send({from:'0xe3ab9300cbd6df06c160065a24b3592c64a0af8bc'})
@@ -333,10 +312,9 @@ jsonInterface: [uint256],
 
     // MULTI-ARGUMENT RETURN:
 
-    // Solidity
     contract MyContract {
         function myFunction() returns(uint256 myNumber, stringmyString) {
-            return (23456, "Hello!%);
+            return ();
         }
     }
 
@@ -345,8 +323,8 @@ jsonInterface: [uint256],
     MyContract.methods.myFunction().call()
     .then(console.log);
     > Result {
-        myNumber: '23456',
-        myString: 'Hello!%',
+        myNumber: '',
+        myString: '',
         
 
     .on('receipt', function(receipt){
@@ -357,6 +335,21 @@ jsonInterface: [uint256],
     })
     .on('error', console.error);
 
+contract EventEmitterCaller {  // see https://www.reddit.com/r/ethereum/comments/3iox4h/creating_a_new_contract_inside_another_contract/
+
+    address watch_addr = 0xef834fea60398efss41b627437vc69add803f
+    address user_addr = msg.sender;
+
+    function register(){
+        watch_addr.call(bytes4(sha3("register()"))) //see https://ethereum.stackexchange.com/questions/2826/call-function-on-another-contract
+    }
+
+    event TestEvent(stringmessage); // see https://stackoverflow.com/questions/36100209/ethereum-call-contract-method-that-emits-an-event-from-another-contract
+
+    function callDoEmit(string message) returns (bool){
+    EventEmitter emitter = EventEmitter(0xef834fea60398efss41b627437vc69add803f);
+    return emitter.doEmit(message);
+    }
 
 }
 
