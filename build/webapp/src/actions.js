@@ -30,11 +30,11 @@ export function fetchProjects() {
 }
 
 // -------------------------------------------------------------------------
-// Parcel States
+// Art States
 
-export function parcelRangeChange(minX, minY, maxX, maxY) {
+export function artRangeChange(minX, minY, maxX, maxY) {
   return {
-    type: types.parcelRangeChanged,
+    type: types.artRangeChanged,
     minX,
     minY,
     maxX,
@@ -42,18 +42,18 @@ export function parcelRangeChange(minX, minY, maxX, maxY) {
   }
 }
 
-export function clickParcel(x, y) {
+export function clickArt(x, y) {
   return {
-    type: types.clickParcel,
+    type: types.clickArt,
     x,
     y
   }
 }
 
-export function fastBid(parcel) {
+export function fastBid(art) {
   return {
     type: types.fastBid,
-    parcel
+    art
   }
 }
 
@@ -100,15 +100,6 @@ export function fetchAddressStats(address) {
   return {
     type: types.fetchAddressStats.request,
     address
-  }
-}
-
-// -------------------------------------------------------------------------
-// Districts
-
-export function fetchDistricts() {
-  return {
-    type: types.fetchDistricts.request
   }
 }
 
