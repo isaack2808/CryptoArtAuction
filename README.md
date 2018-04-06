@@ -7,7 +7,7 @@ The goal is to first create a webapp, then apps on the Google Play and Apple Sto
 Some of the prerequisite packages are the following:
 
 solidity, solc, node-js, npm, web3, ganache-cli, truffle, Docker, Docker Compose, python, Golang, java, sqlite, imgur, pyeth, serpent, react, php, nginx, parity, redux
-browserify, react-redux, redux-devtools
+browserify, react-redux, redux-devtools, Babel-npm, step-npm, Underscore.js-npm
 
 If you are a developer and/or artist interested in contributing to this project whether it be code or art; please email aquietstgallery@gmail.com.
 
